@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overflow-ellipsis {
+  --max-lines: 3;
+  --line-height: 1.4;
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.overflow-ellipsis ::before {
+  content: "";
+  position: absolute;
+  height: calc(1em * var(--line-height));
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
 }
+
+.expand-btn {
+  appearance: none;
+  padding: 1px;
+  border-radius: 0.25em;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 8px;
+  color: #3b39d9;
+}
+
+.expand-btn::before {
+  content: "Read more...";
+}
+
+.expand-btn:checked::before {
+  content: "Read less...";
+}
+
+.overflow-ellipsis:has(+ .expand-btn:checked) {
+  max-height: none;
+}
+
+/* .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: calc(100% - 768px);
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p {
+  font-weight: 600;
+} */
