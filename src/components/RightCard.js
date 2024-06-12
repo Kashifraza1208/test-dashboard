@@ -49,7 +49,7 @@ const RightCard = () => {
           </button>
         </div>
       </div>{" "}
-      <div className="flex flex-col  p-5 h-72 lg:h-56  bg-white gap-5  w-full shadow-lg">
+      <div className="flex flex-col  p-5 h-72 lg:h-64  bg-white gap-5  w-full shadow-lg">
         <div className="flex gap-2 items-center justify-start">
           <p className="font-semibold">Pending Payment</p>
         </div>
@@ -93,7 +93,7 @@ const RightCard = () => {
           </button>
         </div>
       </div>{" "}
-      <div className="flex flex-col  p-5 h-72  lg:h-60 bg-white gap-5  w-full shadow-lg">
+      <div className="flex flex-col  p-5 h-72  lg:h-64 bg-white gap-5  w-full shadow-lg">
         <div className="flex gap-2 items-center justify-start">
           <p className="font-semibold">Upcoming FD Maturity</p>
         </div>
