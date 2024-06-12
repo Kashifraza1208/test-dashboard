@@ -38,7 +38,7 @@ const Navbar = () => {
         <p className="cursor-default font-semibold">FAQs</p>
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5   bg-white px-3 py-2 text-sm font-semibold text-gray-900   ring-gray-300 ">
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5   bg-white px-3 py-2 text-md font-semibold text-gray-900   ring-gray-300 ">
               <p className="cursor-pointer">Support</p>
             </MenuButton>
           </div>
